@@ -38,7 +38,7 @@ The data set, ml-100k, consists of 100,000 ratings of 1682 movies from 943 users
 
 **Class: UserRating**
 
-`initialize(user_id, rating, timestamp)` - Initializes instance variables: `@user_id`, `rating`, and `timestamp`.
+`initialize(user_id, rating, timestamp)` - Initializes instance variables: `@user_id`, `@rating`, and `@timestamp`.
 
 ###Questions
 
