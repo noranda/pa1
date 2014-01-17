@@ -2,6 +2,9 @@
 #####Written by: Noranda Brown
 #####Version: 2014.1.17
 
+###CodeClimate
+[![Code Climate](https://codeclimate.com/github/noranda/pa1.png)](https://codeclimate.com/github/noranda/pa1)
+
 ###Data
 The data set, ml-100k, consists of 100,000 ratings of 1682 movies from 943 users downloaded from http://www.grouplens.org. The main data set u.data consists of 100,000 rows where each row has 4 tab-separated items: user_id, movie_id, rating, and timestamp.
 

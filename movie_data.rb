@@ -38,7 +38,7 @@ class MovieData
   # user1 and user2 (higher numbers indicate greater similarity)
   def similarity(user1, user2)
     common_movies = @movies.values.select { |movie| movie.user_rated?(user1.to_i) && movie.user_rated?(user2.to_i) }
-    return 0.0 if common_movies.empty?
+    return 0.0 if common_movies.empty? # Common case
     rating_sum = common_movies.inject(0) { |sum, movie| sum + (movie.user_rating(user1.to_i) - movie.user_rating(user2.to_i)).abs }
     max_rating_sum = 4 * common_movies.length
     100.0 - (rating_sum.to_f / max_rating_sum.to_f * 100.0)
