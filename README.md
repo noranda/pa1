@@ -45,9 +45,9 @@ The data set, ml-100k, consists of 100,000 ratings of 1682 movies from 943 users
 1. Describe an algorithm to predict the ranking that a user U would give to a movie M assuming the user hasn’t already ranked the movie in the dataset.
 ```
 predict_rating(user_id)
-    sum = most_similar(user_id, 20).inject(0) { |sum, user| sum + user_rating(user) }
-    count = most_similar(user_id, 20).inject(0) { |count, user| count + 1 if user_rated?(user) }
-    (sum / count).to_i
+        sum = most_similar(user_id, 20).inject(0) { |sum, user| sum + user_rating(user) }
+        count = most_similar(user_id, 20).inject(0) { |count, user| count + 1 if user_rated?(user) }
+        (sum / count).to_i
 ```
 This algorithm calculates the average rating of the top 20 most similar users.
 
