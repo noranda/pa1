@@ -1,6 +1,6 @@
 #Assignment: PA 1
 #####Written by: Noranda Brown
-#####Version: 2014.1.17
+#####Version: 2014.1.18
 
 ###CodeClimate
 [![Code Climate](https://codeclimate.com/github/noranda/pa1.png)](https://codeclimate.com/github/noranda/pa1)
@@ -11,9 +11,9 @@ The data set, ml-100k, consists of 100,000 ratings of 1682 movies from 943 users
 ###Program
 **Class: MovieData**
 
-`initialize` - Initializes instance variable: `@movies`
+`initialize` - Initializes instance variable `@movies` as a hash.
 
-`load_data` - Reads in data from the original ml-100k files and stores movie objects in a hash.
+`load_data` - Reads in data from the original ml-100k/u.data file and stores movie objects in a hash.
 
 `popularity(movie_id)` - Returns a number (0 - 100) that indicates the popularity (higher numbers are more popular). Note: Popularity is calculated by summing the ratings for the movie and normalizing the result. This takes into account not only the average rating, but also the number of times a movie has been reviewed. i.e. sum_ratings / num_ratings (to get the average rating) * num_ratings (to account for multiple reviews) = sum_ratings -> normalize
 
@@ -23,11 +23,11 @@ The data set, ml-100k, consists of 100,000 ratings of 1682 movies from 943 users
 
 `most_similar(u, number_of_users = 5)` - Returns a list of the top number_of_users (default = 5) whose tastes are most similar to the tastes of user u.
 
-`other_users(u)` - Private method that lists of all users except u.
+`other_users(u)` - Private method that returns a list of all users except u.
 
 **Class: Movie**
 
-`initialize(movie_id)` - Initializes instance variables: `@movie_id`, `@user_ratings`, and `@sum_ratings`.
+`initialize(movie_id)` - Initializes instance variables `@movie_id`, `@user_ratings`, and `@sum_ratings`.
 
 `add_rating(user_id, rating, timestamp)` - Adds a user_id, rating and timestamp to a movie.
 
@@ -41,7 +41,7 @@ The data set, ml-100k, consists of 100,000 ratings of 1682 movies from 943 users
 
 **Class: UserRating**
 
-`initialize(user_id, rating, timestamp)` - Initializes instance variables: `@user_id`, `@rating`, and `@timestamp`.
+`initialize(user_id, rating, timestamp)` - Initializes instance variables `@user_id`, `@rating`, and `@timestamp`.
 
 ###Questions
 

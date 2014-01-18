@@ -1,6 +1,6 @@
 # movie_data.rb
 # Written by: Noranda Brown
-# Version: 2014.1.17
+# Version: 2014.1.18
 
 class MovieData
 
@@ -44,7 +44,8 @@ class MovieData
     100.0 - (rating_sum.to_f / max_rating_sum.to_f * 100.0)
   end
 
-  # returns a list of the top number_of_users (default = 5) whose tastes are most similar to the tastes of user u
+  # returns an array list of the top number_of_users (default = 5) whose tastes are most similar to the tastes of user u
+  # with the most_similar users at the front of the array
   def most_similar(u, number_of_users = 5)
     similarity_hash = other_users(u.to_i).inject({}) { |user_similarity, user_id| user_similarity.merge({user_id => similarity(u.to_i, user_id)}) }
     similarity_hash.sort_by { |user_similarity| user_similarity[1] }.reverse.take(number_of_users).map(&:first)
